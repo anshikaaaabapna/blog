@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@1,500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,12 +18,19 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+*>*{
+  font-family: 'Outfit', sans-serif;
+font-family: 'Poppins', sans-serif;
+}
+/* .input-text {
+  @apply mt-1 block w-60 px-3 py-2 bg-white border border-slate-300
+  rounded-full text-sm shadow-sm placeholder-slate-500
+  @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500;
+} */
+@layer components {
+  .input-text {
+    @apply mt-1 block w-60 px-3 py-2 bg-white border border-slate-300
+    rounded-full text-sm shadow-sm placeholder-slate-500
+    focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500;
+  }
 }
